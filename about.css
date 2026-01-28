@@ -1,0 +1,66 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+body {background:#0f2027; color:#fff;}
+
+/* Header */
+.header {
+    width:100%; display:flex; justify-content:space-between; align-items:center;
+    padding:15px 50px; background:rgba(0,0,0,0.8); position:sticky; top:0; z-index:100;
+}
+.header-left {display:flex; align-items:center; gap:15px;}
+.logo {width:50px; height:50px; border-radius:50%; border:3px solid #fff; box-shadow:0 0 10px #0ff;}
+.username {font-size:22px; color:#00ffff; font-weight:bold;}
+.header-right a {color:#fff; text-decoration:none; margin-left:25px; font-size:16px; transition:0.3s;}
+.header-right a.active, .header-right a:hover {color:#ff00ff;}
+
+/* Hero */
+.hero {padding:50px 20px;}
+.intro-container {display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap;}
+.profile-pic {width:200px; border-radius:20px; box-shadow:0 0 30px rgba(0,255,255,0.5);}
+.intro-text h1 {font-size:32px; margin-bottom:15px; background:linear-gradient(90deg,#00ffff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.intro-text p {font-size:16px; line-height:1.6; max-width:700px; margin-bottom:15px;}
+
+/* Skills */
+.skills {padding:50px 20px; max-width:900px; margin:0 auto;}
+.skills h2 {font-size:28px; text-align:center; margin-bottom:20px; background:linear-gradient(90deg,#00ffff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.skills-list {list-style:none; padding-left:0; margin-bottom:40px;}
+.skills-list li {
+    padding:12px 15px;
+    margin-bottom:10px;
+    background:rgba(255,255,255,0.1);
+    border-left:5px solid #00ffff;
+    border-radius:8px;
+    transition:0.3s;
+}
+.skills-list li:hover {background:#00ffff; color:black; transform:translateX(5px);}
+
+/* Achievements */
+.achievements {padding:50px 20px; max-width:900px; margin:0 auto;}
+.achievements h2 {font-size:28px; text-align:center; margin-bottom:30px; background:linear-gradient(90deg,#ff00ff,#00ffff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.cards {display:flex; gap:20px; flex-wrap:wrap; justify-content:center;}
+.card {background:rgba(0,0,0,0.5); padding:20px; border-radius:15px; flex:1 1 250px; text-align:center; transition:0.3s;}
+.card:hover {background:#ff00ff; color:white; transform:translateY(-5px);}
+
+/* Scroll fade-in animation */
+.skills-list li, .card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.skills-list li.appear, .card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media(max-width:1024px){
+    .intro-container {flex-direction:column; align-items:center;}
+    .profile-pic {width:180px;}
+}
+@media(max-width:600px){
+    .header {padding:10px 20px;}
+    .username {font-size:18px;}
+    .header-right a {font-size:14px; margin-left:15px;}
+    .intro-text h1 {font-size:26px;}
+    .intro-text p {font-size:14px;}
+    .skills h2, .achievements h2 {font-size:24px;}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Sazzad Hossen</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="header">
+    <div class="header-left">
+        <img src="Common.jpeg" alt="Logo" class="logo">
+        <span class="username">Sazzad Hossen</span>
+    </div>
+    <nav class="header-right">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="welcome-message">
+        <h1 class="animate-text">আমার ওয়েবসাইটে আপনাকে স্বাগতম</h1>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img class="slide active" src="1.jpeg" alt="1">
+            <img class="slide" src="2.jpeg" alt="2">
+            <img class="slide" src="3.jpeg" alt="3">
+            <img class="slide" src="4.jpeg" alt="4">
+            <img class="slide" src="5.jpeg" alt="5">
+            <img class="slide" src="6.jpeg" alt="6">
+            <img class="slide" src="7.jpeg" alt="7">
+        </div>
+        <div class="overlay"></div>
+
+        <button class="nav prev" onclick="prevSlide()">❮</button>
+        <button class="nav next" onclick="nextSlide()">❯</button>
+
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+
+    <!-- Footer Text -->
+    <div class="footer-text">
+        <p>এই ওয়েবসাইটটি সম্পূর্ণভাবে আমার নিজস্ব প্রচেষ্টা ও শেখার ফলাফল। এটি GitHub-এ পরীক্ষামূলকভাবে হোস্ট করা হয়েছে।</p>
+        <p>ভবিষ্যতে যদি ব্যবহারকারী সংখ্যা বৃদ্ধি পায় এবং প্রত্যাশিত ফলাফল পাওয়া যায়, তাহলে নিজস্ব ডোমেইন ও হোস্টিং কিনে পূর্ণাঙ্গভাবে ব্যবহার করা হবে।</p>
+    </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
